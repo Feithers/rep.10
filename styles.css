@@ -1,0 +1,252 @@
+/*General stuff*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*-----------*/
+/*-----------*/
+
+
+
+/*Layout*/
+
+body {
+    min-height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+}
+
+main {
+    display: grid;
+    margin: 1rem;
+    grid-template-rows: minmax(25vh, auto) minmax(25vh, auto) minmax(100vh, auto);
+}
+
+/*---------*/
+/*---------*/
+
+
+
+
+
+/*Section 1 - Title */
+
+
+.section-1 {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    row-gap: 1rem;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-align: center;
+    max-width: 50vw;
+    color: hsl(300, 43%, 22%);
+}
+
+.ptx {
+    min-width: auto;
+    max-width: 80vw;
+    text-align: center;
+    line-height: 1.3;
+    color: hsl(303, 10%, 53%);
+    font-weight: 500;
+}
+
+
+/*----------*/
+/*----------*/
+
+
+
+
+/* Section 2 - Reviews section */
+
+
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    position: relative;
+}
+
+.reviews-box {
+    background-color: hsl(300, 24%, 96%);
+    width: 80vw;
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    row-gap: 0.7rem;
+}
+
+.reviews-txt {
+    color: hsl(300, 43%, 22%);
+    font-weight: 600;
+}
+
+
+/*----------*/
+/*----------*/
+
+
+
+
+/* Section 3 - User testimonials section */
+
+
+.section-3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+.user-block {
+    background-color: hsl(300, 43%, 22%);
+    padding: 3rem;
+    height: 30vh;
+    width: 80vw;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    line-height: 1.3;
+}
+
+.user-img {
+    width:15%;
+    border-radius: 50%;
+}
+
+.username-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.username {
+    color: white;
+    font-weight: 500;
+}
+
+.status {
+    color: hsl(333, 80%, 67%);
+}
+
+.quotes {
+    color: hsl(300, 24%, 96%);
+}
+
+.profile-block {
+    display: flex;
+    column-gap: 2rem;
+}
+
+
+/*----------*/
+/*----------*/
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+
+body {
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+}
+
+main {
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: minmax(40vh, auto) minmax(40vh, auto)
+}
+
+.section-1 {
+    align-items: flex-start;
+    row-gap: 3rem;
+}
+
+.title {
+    font-size: 5rem;
+    text-align: left;
+    max-width: 30vw;
+}
+
+.ptx {
+    text-align: left;
+    max-width: 30vw;
+}
+
+.reviews-box {
+    width: 30vw;
+    flex-direction: row;
+    column-gap: 5rem;
+}
+
+.reviews-box-1 {
+    position: relative;
+    right: 3vw;
+}
+
+.reviews-box-3 {
+    position: relative;
+    left: 3vw;
+}
+ 
+.section-3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    flex-direction: row;
+}
+
+.user-block {
+    height: 25vh;
+    width: 23vw;
+}
+
+.user-block-1 {
+    position: relative;
+    bottom: 2vh;
+}
+
+.user-block-3 {
+    position: relative;
+    top: 2vh;
+}
+
+
+
+}
